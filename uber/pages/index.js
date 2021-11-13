@@ -1,7 +1,32 @@
 import tw from "tailwind-styled-components";
 import Map from "./components/Map";
+import Link from "next/link"
+import Image from "next/image"
+import {useEffect, useState} from 'react'
+import {signOut, onAuthStateChanged} from "firebase/auth"
+import {auth} from "../firebase"
+import {useRouter} from "next/router"
 
 export default function Home() {
+
+  const [user, setUser] = useState(null)
+  const router = useRouter()
+
+  useEffect(() => {
+    return onAuthStateChanged(auth, user => {
+        if(user){
+          setUser({
+            name: user.displayName,
+            photoUrl: user.photoURL
+          })
+        }
+        else{
+          setUser(null)
+          router.push("/login")
+        }
+    })
+  }, [])
+
   return (
     <Wrapper>
       <Map></Map>
@@ -10,24 +35,30 @@ export default function Home() {
         <Header>
           <UberLogo src="https://i.ibb.co/84stgjq/uber-technologies-new-20218114.jpg" />
           <Profile>
-            <Name>Test User</Name>
-            <UserImage src="https://as2.ftcdn.net/v2/jpg/01/26/61/13/1000_F_126611337_m8kcRtS5G7AhrFpOQ0Wufx4PgL6J4yxg.jpg" />
+            <Name>{user && user.name}</Name>
+            <UserImage src={user && user.photoURL} onClick={()=> signOut(auth)} />
           </Profile>
         </Header>
         {/* ActionButtons */}
         <ActionButtons>
-          <ActionButton>
-            <ActionButtonImage src="https://i.ibb.co/cyvcpfF/uberx.png"></ActionButtonImage>
-            Ride
-          </ActionButton>
-          <ActionButton>
-            <ActionButtonImage src="https://i.ibb.co/n776JLm/bike.png"></ActionButtonImage>
-            Wheels
-          </ActionButton>
-          <ActionButton>
-            <ActionButtonImage src="https://i.ibb.co/5RjchBg/uberschedule.png"></ActionButtonImage>
-            Reserve
-          </ActionButton>
+          <Link href="/search">
+            <ActionButton>
+              <ActionButtonImage src="https://i.ibb.co/cyvcpfF/uberx.png"></ActionButtonImage>
+              Ride
+            </ActionButton>
+          </Link>
+          <Link href="/search">
+            <ActionButton>
+              <ActionButtonImage src="https://i.ibb.co/n776JLm/bike.png"></ActionButtonImage>
+              Wheels
+            </ActionButton>
+          </Link>
+          <Link href="/search">
+            <ActionButton>
+              <ActionButtonImage src="https://i.ibb.co/5RjchBg/uberschedule.png"></ActionButtonImage>
+              Reserve
+            </ActionButton>
+          </Link>
         </ActionButtons>
         {/* InputButtons */}
         <InputButton>Where To Go?</InputButton>
@@ -61,7 +92,7 @@ const Profile = tw.div`
 `;
 
 const UserImage = tw.img`
-  h-12 w-12 rounded-full border border-gray-200 p-1
+  h-12 w-12 rounded-full border border-gray-200 p-1 cursor-pointer
 `;
 
 const ActionButtons = tw.div`
