@@ -1,0 +1,100 @@
+.Sidebar{
+    top: 80px;
+    position: sticky;
+    flex: 0.2;
+    border-radius: 10px;
+    text-align: center;
+    height: fit-content;
+}
+
+.SidebarAvatar{
+    margin-bottom: 10px;
+}
+
+.SidebarTop{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 1px solid lightgray;
+    border-bottom: 0;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    background-color: white;
+    padding-bottom: 10px;
+}
+
+.SidebarTop > img{
+    margin-bottom: -20px;
+    width: 100%;
+    height: 60px;
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+    object-fit: cover;
+}
+
+.SidebarTop > h4{
+    color: gray;
+    font-size: 12px;
+}
+
+.SidebarTop > h2{
+    font-size: 18px;
+}
+
+.SidebarStats{
+    padding: 10px;
+    margin-bottom: 10px;
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+}
+
+.SidebarStat{
+    margin-top: 10px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.SidebarStat > p{
+    color: gray;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.SidebarStatNumber{
+    font-weight: bold;
+    color: rgb(89, 89, 228) !important;
+}
+
+.SidebarBottom{
+    text-align: left;
+    padding: 10px;
+    border: 1px solid lightgray;
+    background-color: white;
+    border-radius: 10px;
+    margin-top: 10px;
+}
+
+.SidebarBottom > p{
+    font-size: 13px;
+    padding-bottom: 10px;
+}
+
+.SidebarRecentItem{
+    display: flex;
+    font-size: 13px;
+    color: gray;
+    font-weight: bolder;
+    cursor: pointer;
+}
+
+.SidebarRecentItem:hover{
+    background-color: whitesmoke;
+    border-radius: 10px;
+    cursor: pointer;
+    color: black;
+}
+
+.SidebarHash{
+    margin-right: 10px;
+    margin-left: 5px;
+}
