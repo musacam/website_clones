@@ -1,0 +1,32 @@
+.Posts{
+    background-color: #fff;
+    padding: 15px;
+    margin-bottom: 10px;
+    border-radius: 10px;
+}
+
+.PostsHeader{
+    display: flex;
+    margin-bottom: 10px;
+}
+
+.PostsHeaderInfo{
+    margin-left: 10px;
+}
+
+.PostsHeaderInfo > p{
+    font-size: 12px;
+}
+
+.PostsBody{
+    overflow-wrap: anywhere;
+}
+
+.PostsHeaderInfo > h2{
+    font-size: 15px;
+}
+
+.PostsButtons{
+    display: flex;
+    justify-content: space-evenly;
+}

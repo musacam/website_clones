@@ -14,7 +14,7 @@ function Sidebar() {
     return (
         <div className="Sidebar">
             <div className="SidebarTop">
-                <img src="https://images.unsplash.com/photo-1507608158173-1dcec673a2e5?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80" alt=""/>
+                <img src="https://images.unsplash.com/photo-1579546929518-9e396f3cc809?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxleHBsb3JlLWZlZWR8MXx8fGVufDB8fHw%3D&w=1000&q=80" alt=""/>
                 <Avatar className="SidebarAvatar"/>
                 <h2>Name Surname</h2>
                 <h4>Title at Workplace</h4>
