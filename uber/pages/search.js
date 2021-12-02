@@ -10,7 +10,9 @@ function Search() {
   return (
   <Wrapper>
     <ButtonContainer>
-      <BackButton src="https://img.icons8.com/ios-filled/50/000000/left.png"/>
+      <Link href="/">
+        <BackButton src="https://img.icons8.com/ios-filled/50/000000/left.png"/>
+      </Link>
     </ButtonContainer>
     <InputContainer>
       <FromToIcons>
@@ -63,7 +65,7 @@ const ButtonContainer = tw.div`
 `
 
 const BackButton = tw.img`
-  h-12
+  h-12 cursor-pointer
 `
 
 const FromToIcons = tw.div`

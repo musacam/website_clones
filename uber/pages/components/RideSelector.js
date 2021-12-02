@@ -15,7 +15,7 @@ const RideSelector = (props) => {
         .then((response)=>{
             return response.json();
         }).then(data => {
-            setRideDuration(data.routes[0].duration / 100)
+            setRideDuration(150);
         })
     }
 
