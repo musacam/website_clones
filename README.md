@@ -1,18 +1,19 @@
 # Website Clones with React
 
-This repository will be dedicated to me trying to implement some popular websites clones (Amazon, Twitter, Netflix, Airbnb, Disney+ etc...) with React and Redux.
+- Hello there.
+- General Kenobi.
+
+As you know I am trying to improve myself, as always. In this repository, I will try to implement some big websites such as Netflix, Amazon, Linkedin, Airbnb. I will be using React for this. Wish me luck...
 
 ## Objectives
 
 - Try to implement at least 4 website.
-- Learn the insight of CSS.
-  - Flex display is hard.
-  - Aligning items always hard.
-  - Understand position absolute relative stuff.
-- Deep dive into React specific functions.
-- Learn more about Redux.
+- Learn the insight of front-end.
+- Deep dive into React specifics.
+- Learn more about Redux, Hooks maybe Native.
 - Deep dive into MongoDB.
 
 ## Clones
+
 - Airbnb Clone : https://airbnb-clone-48b34.web.app/
 - Linkedin Clone : https://linkedin-clone-1676f.web.app/
