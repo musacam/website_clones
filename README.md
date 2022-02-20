@@ -18,6 +18,6 @@ As you know I am trying to improve myself, as always. In this repository, I will
 - Airbnb Clone : https://airbnb-clone-48b34.web.app/
 - Linkedin Clone : https://linkedin-clone-1676f.web.app/
 
-## Simple Preview
+## Example Preview of Linkedin Clone
 
 ![](https://github.com/musacam/website_clones/blob/main/linkedin/public/Linkedin.png)
